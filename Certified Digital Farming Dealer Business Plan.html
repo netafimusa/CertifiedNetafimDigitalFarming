@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netafim Digital Farming Dealer Business Plan</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <style>
+        @media print {
+            .page {
+                page-break-after: always;
+                page-break-inside: avoid;
+            }
+            .no-print {
+                display: none;
+            }
+            body {
+                margin: 0;
+                padding: 0;
+            }
+            .print-button {
+                display: none;
+            }
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background: #f0f0f0;
+        }
+
+        .page {
+            width: 8.5in;
+            min-height: 11in;
+            padding: 0.5in;
+            margin: 20px auto;
+            background: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            box-sizing: border-box;
+            position: relative;
+        }
+
+        .page-cover {
+            width: 8.5in;
+            min-height: 0in;
+            padding: 0.0in;
+            margin: 0px auto;
+            background: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            box-sizing: border-box;
+            position: relative;
+	    background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .cover-page {
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+        }
+
+        .last-page {
+            background-image: url('https://www.netafimusa.com/globalassets/last-page-certified-digital-farming-dealer-business-plan8.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"], 
+        input[type="number"],
+        input[type="date"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            color: #2c5282;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            color: #2c5282;
+            border-bottom: 2px solid #2c5282;
+            padding-bottom: 10px;
+        }
+
+        .expectations-list {
+            padding-left: 20px;
+        }
+
+        .page-number {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            font-size: 12px;
+            color: #666;
+        }
+
+         .print-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #2c5282;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            z-index: 1000;
+        }
+
+        .print-button:hover {
+            background-color: #1a365d;
+        }
+
+        .footer {
+            position: absolute;
+            bottom: 40px;
+            left: 0;
+            right: 0;
+            text-align: center;
+        }
+
+        .logo {
+            max-width: 200px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Front Page -->
+    <div class="cover-page">
+        <img src="https://www.netafimusa.com/globalassets/front-page-a4.png" alt="Certified Digital Farming Dealer Business Plan" class="cover-image">
+    </div>
+
+    <!-- Page 1 -->
+    <div class="page">
+        <div class="header">
+            <h1>Certified Digital Farming Dealer Business Plan</h1>
+        </div>
+        <div class="form-group">
+            <label for="preparedBy">Prepared By:</label>
+            <input type="text" id="preparedBy" name="preparedBy" required>
+        </div>
+        <div class="form-group">
+            <label for="company">Company:</label>
+            <input type="text" id="company" name="company" required>
+        </div>
+        <div class="form-group">
+            <label for="market">Market Addressed City, State/Province:</label>
+            <input type="text" id="market" name="market" required>
+        </div>
+        <div class="form-group">
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" required>
+        </div>
+        <div class="footer">
+            <p>netafimusa.com</p>
+        </div>
+        <div class="page-number">1</div>
+    </div>
+
+    <!-- Expectations Page -->
+    <div class="page">
+        <h2>Expectations to be a Certified Netafim USA Digital Farming Dealer</h2>
+        <div class="expectations-list">
+            <p>A Business that is in the irrigation industry or an agriculture related business that would have a direct connection to Digital Farming.</p>
+            <p>Dedicated staff for Digital Farming sales, service, and customer success.</p>
+            <p>A financial background to handle $<input type="number" style="width: 150px; display: inline-block"> a year in selling and stocking Digital Farming products.</p>
+            <p>Have a location available for accepting shipments of products by semi-trucks and a suitable location to store the materials.</p>
+            <p>Be able to install, design and service Netafim Digital Farming products that relate to irrigation with appropriate equipment and skills.</p>
+            <p>Be able to deploy best practices to ensure all Netafim Digital Farming Products are suitable for each specific application.</p>
+            <p>Must have an established business telephone and internet service with customer support available between 7:00AM and 5:00PM in the local time zone.</p>
+            <p>Maintain a minimum level of Service Level Agreement with End Users to ensure service standards are consistently met.</p>
+            <p>Ability to complete Digital Farming Netafim University in sales and technical training within 6 months of being appointed a Certified Netafim USA Digital Farming dealer.</p>
+            <p>Have a system to place purchase orders and / or order from the Netafim Dealer Portal with a unique reference.</p>
+        </div>
+        <div class="page-number">2</div>
+    </div>
+
+    <!-- Market Analysis Page -->
+    <div class="page">
+        <h2>Market Analysis</h2>
+        <div class="form-group">
+            <label for="targetCrops">What are the target crops in your sales area for Digital Farming?</label>
+            <textarea id="targetCrops" name="targetCrops" rows="4" required></textarea>
+        </div>
+        
+        <h3>Current Market Status</h3>
+        <div class="form-group">
+            <label for="currentAcres">Current Acres:</label>
+            <input type="number" id="currentAcres" name="currentAcres" required>
+        </div>
+        <div class="form-group">
+            <label for="maxControllerPercent">MAX Controller Percentage:</label>
+            <input type="number" id="maxControllerPercent" name="maxControllerPercent" required>
+        </div>
+        <div class="form-group">
+            <label for="iotAcres">Current IoT Device Acres:</label>
+            <input type="number" id="iotAcres" name="iotAcres" required>
+        </div>
+        <div class="form-group">
+            <label for="iotDevicesPercent">IoT Devices Percentage:</label>
+            <input type="number" id="iotDevicesPercent" name="iotDevicesPercent" required>
+        </div>
+        <div class="page-number">3</div>
+    </div>
+
+    <!-- Competitive Analysis Page -->
+    <div class="page">
+        <h2>Competitive Analysis</h2>
+        <div class="form-group">
+            <label for="geography">Specify the geography your business currently services on a regular basis for Digital Farming (include names of towns, cities, counties, etc):</label>
+            <textarea id="geography" name="geography" rows="4" required></textarea>
+        </div>
+        <div class="form-group">
+            <label for="expansionPlans">Geographical expansion plans, if any:</label>
+            <textarea id="expansionPlans" name="expansionPlans" rows="4"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="outsideGeography">Do you currently sell any Digital Farming products outside of your covered geography? If so, please specify those geographies and how you provide ongoing support to those customers:</label>
+            <textarea id="outsideGeography" name="outsideGeography" rows="4"></textarea>
+        </div>
+        <p><em>*Please note that Netafim does not provide exclusive territory agreements.</em></p>
+        <div class="page-number">4</div>
+    </div>
+
+    <!-- Training Page -->
+    <div class="page">
+        <h2>Training & Continuing Education</h2>
+        <div class="form-group">
+            <label for="trainingWeeks">Provide specific weeks within the next 6 months your team would be available to attend Digital Farming Netafim University (DFNU):</label>
+            <textarea id="trainingWeeks" name="trainingWeeks" rows="4" required></textarea>
+        </div>
+        <div class="form-group">
+            <label for="trainingLocation">Specify training location preference:</label>
+            <select id="trainingLocation" name="trainingLocation" required>
+                <option value="">Select Location</option>
+                <option value="fresno">Fresno, CA</option>
+                <option value="thomasville">Thomasville, GA</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="personnelNames">Provide names of personnel to be trained at Digital Farming Netafim University:</label>
+            <textarea id="personnelNames" name="personnelNames" rows="4" required></textarea>
+        </div>
+        <div class="form-group">
+            <label for="trainingTopics">What specific topics on sales and technical training at Netafim Digital Farming University would be most beneficial to your Digital Farming Team?</label>
+            <textarea id="trainingTopics" name="trainingTopics" rows="4" required></textarea>
+        </div>
+        <div class="page-number">5</div>
+    </div>
+
+    <!-- Last Page -->
+    <div class="cover-page">
+        <img src="https://www.netafimusa.com/globalassets/last-page-a4.png" class="cover-image">
+    </div>
+    <button onclick="window.print()" class="print-button">Save as PDF / Print</button>
+    </div>
+
+    <script>
+        // Add any additional JavaScript for form handling if needed
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'p' && e.ctrlKey) {
+                e.preventDefault();
+                window.print();
+            }
+        });
+    </script>
+</body>
+</html>
